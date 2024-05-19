@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gráfico</title>
+</head>
+<body>
+    <h2>Gerador de Gráficos Plotly</h2>
+    <form action="/" method="POST">
+        <div style="display: flex">
+            <input type="radio" id="scatter" name="tipo_grafico" value="scatter" checked="checked">
+            <label for="scatter">Scatter</label><br>
+            <input type="radio" id="line" name="tipo_grafico" value="line">
+            <label for="line">Line</label><br>
+            <input type="radio" id="bar" name="tipo_grafico" value="bar">
+            <label for="bar">Bar</label><br>
+            <input type="radio" id="bubble" name="tipo_grafico" value="bubble">
+            <label for="bubble">Bubble</label><br>
+            <input type="radio" id="dot" name="tipo_grafico" value="dot">
+            <label for="dot">Dot</label><br>
+        </div>
+        <label for="x">Valor X:</label><br>
+        <input type="text" id="x" name="x" required><br>
+        <label for="y">Valor Y:</label><br>
+        <input type="text" id="y" name="y" required><br>
+        <label for="z">Tamanho bolha:</label><br>
+        <input type="text" id="z" name="z"><br>
+        <input type="submit" value="Gerar Gráfico">
+    </form>
+    {{ graph | safe }}
+</body>
+</html>
